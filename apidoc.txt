@@ -1,0 +1,92 @@
+=======================================
+        Nodewave API Documentation
+=======================================
+
+AUTHENTICATION
+--------------------------
+
+POST /auth/register
+Description: Register a new user.
+
+Request Body:
+{
+  "username": "user",
+  "password": "secret123"
+}
+
+Response:
+{
+  "message": "User registered successfully"
+}
+
+---
+
+POST /auth/login
+Description: Login user and get JWT token.
+
+Request Body:
+{
+  "username": "user",
+  "password": "secret123"
+}
+
+Response:
+{
+  "token": "your.jwt.token"
+}
+
+FILE UPLOAD
+--------------------------
+
+POST /upload
+Description: Upload an Excel file (mocked only, not actually processed).
+
+Headers:
+Authorization: Bearer <token>
+Content-Type: multipart/form-data
+
+Form Data:
+file: (file)
+
+Response:
+{
+  "message": "File uploaded successfully"
+}
+
+FILES
+--------------------------
+
+GET /files
+Description: List uploaded files (paginated & filterable).
+
+Query Parameters:
+- page (default: 1)
+- limit (default: 10)
+- search (optional)
+
+Headers:
+Authorization: Bearer <token>
+
+Response:
+{
+  "data": [...],
+  "total": 42,
+  "page": 1,
+  "limit": 10
+}
+
+ERROR FORMAT
+--------------------------
+Standard error response format:
+{
+  "error": "Unauthorized"
+}
+
+ℹNOTES
+--------------------------
+- All protected endpoints require JWT token via Authorization header.
+- File upload is mocked — not actually processed.
+
+=======================================
+           END OF DOCUMENTATION
+=======================================
