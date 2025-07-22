@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.1.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "dev": "npx ts-node-dev src/index.ts"
+  },
+  "name": "nodewave-backend-base-repository",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "undici-types": "^7.8.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
